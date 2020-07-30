@@ -1,7 +1,8 @@
 # git-husky-commitlint
 https://remarkablemark.org/blog/2019/05/29/git-husky-commitlint/   
-https://commitlint.js.org/#/
-https://commitlint.io/
+https://commitlint.js.org/#/   
+https://commitlint.io/   
+https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit
 
 ![commit-message](./images/commit-message.png)
 
@@ -21,4 +22,4 @@ git reset --soft HEAD~1
 git log -n 5
 
 
-.
+...
