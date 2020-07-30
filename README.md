@@ -19,3 +19,6 @@ git reset --soft HEAD~1
 
 ## show last N commits
 git log -n 5
+
+
+.
