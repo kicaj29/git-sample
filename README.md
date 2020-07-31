@@ -246,8 +246,9 @@ git push origin +master
 ```
 
 ![remote-history-after-squash](./images/remote-history-after-squash.png)
-globally:
+
 ## set author name and email
+globally:
 ```
 git config --global user.name "John Doe"
 git config --global user.email "john@doe.org"
