@@ -1,3 +1,16 @@
+- [git-husky-commitlint](#git-husky-commitlint)
+- [helpful commands](#helpful-commands)
+  * [push changes from local repo to remote](#push-changes-from-local-repo-to-remote)
+  * [revert last commit](#revert-last-commit)
+  * [show last N commits](#show-last-n-commits)
+  * [Squashing commits on local branch](#squashing-commits-on-local-branch)
+  * [Squashing commits on remote branch](#squashing-commits-on-remote-branch)
+  * [set author name and email](#set-author-name-and-email)
+  * [edit git config files](#edit-git-config-files)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 # git-husky-commitlint
 https://remarkablemark.org/blog/2019/05/29/git-husky-commitlint/   
 https://commitlint.js.org/#/   
@@ -257,4 +270,11 @@ for selected repo (go to the repo folder and execute it):
 ```
 git config user.name "John Doe"
 git config user.email "john@doe.org"
+```
+
+## edit git config files
+```
+git config --global --edit
+git config --system --edit
+git config --local --edit
 ```
