@@ -273,7 +273,10 @@ git config user.email "john@doe.org"
 
 ## edit git config files
 ```
-git config --global --edit
 git config --system --edit
+git config --global --edit
 git config --local --edit
 ```
+system - for all users
+global - for current user (it will overried system)
+local - for current repo (it will override global and system)
