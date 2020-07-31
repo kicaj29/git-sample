@@ -246,3 +246,14 @@ git push origin +master
 ```
 
 ![remote-history-after-squash](./images/remote-history-after-squash.png)
+globally:
+## set author name and email
+```
+git config --global user.name "John Doe"
+git config --global user.email "john@doe.org"
+```
+for selected repo (go to the repo folder and execute it):
+```
+git config user.name "John Doe"
+git config user.email "john@doe.org"
+```
