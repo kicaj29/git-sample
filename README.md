@@ -8,7 +8,6 @@
   * [set author name and email](#set-author-name-and-email)
   * [edit git config files](#edit-git-config-files)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 # git-husky-commitlint
