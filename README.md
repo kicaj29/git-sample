@@ -121,4 +121,128 @@ git add .
 git commit -m "docs(readme.md): my commit3"
 git push
 ```
-check history:
+
+check history on remote branch:
+```
+PS D:\GitHub\kicaj29\git-sample> git log -n 4 origin/master
+commit 845bdbb275ef4caddc4eb31df41fbbc580ef41b8 (HEAD -> master, origin/master, origin/HEAD)
+Author: Jacek Kowalski <kicaj29@wp>
+Date:   Fri Jul 31 08:28:22 2020 +0200
+
+    docs(readme.md): my commit3
+
+commit 0fe6259c019c7771f948cc5699ec62f7a111b17f
+Author: Jacek Kowalski <kicaj29@wp>
+Date:   Fri Jul 31 08:10:22 2020 +0200
+
+    docs(readme.md): my commit2
+
+commit 2375c2364c0415fb76bd7b117b824a0d201449ad
+Author: Jacek Kowalski <kicaj29@wp>
+Date:   Fri Jul 31 08:05:31 2020 +0200
+
+    docs(readme.md): my commit1
+
+commit 874ab4824ab2d0a3860a11aa3108bf081337d068
+Author: Jacek Kowalski <kicaj29@wp>
+Date:   Thu Jul 30 21:35:48 2020 +0200
+
+    docs(readme.md): how to do squashing on local branch
+```
+
+![remote-history](./images/remote-history.png)
+
+2. Squash commits locally with (to do it you cannot have any local changes)
+```
+git rebase -i origin/master~3 master
+```
+
+It will open GNU nano editor. Type squash for commit2 and commit3: 
+![editor-squash](./images/editor-squash.png)
+
+Next press Ctrl+o to save the changes and press Enter to confirm it.
+![editor-squash-save](./images/editor-squash-save.png)
+
+Next press Ctrl+x to close the file. It will open next editor:
+
+![editor-commits](./images/editor-commits.png)   
+
+Comment out commit 2 and 3 and update text for commit 1:
+
+![editor-commits-after-change](./images/editor-commits-after-change.png)
+
+Save and close the changes: ctrl+o, enter, ctrl + x.
+
+```
+PS D:\GitHub\kicaj29\git-sample> git rebase -i origin/master~3 master
+[detached HEAD 87320cf] docs(readme.md): example how to do squash for commits from remote branch
+ Date: Fri Jul 31 08:05:31 2020 +0200
+ Committer: Jacek Kowalski <kicaj29@wp.pl>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 26 insertions(+), 3 deletions(-)
+Successfully rebased and updated refs/heads/master.
+```
+
+check local barnch history, commits 1, 2, 3 are squashed into one new commit "docs(readme.md): example how to do squash for commits from remote branch":
+```
+PS D:\GitHub\kicaj29\git-sample> git log -n 3
+commit 87320cff22ff065b3a61344dda5358711cb421c2 (HEAD -> master)
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Fri Jul 31 08:05:31 2020 +0200
+
+    docs(readme.md): example how to do squash for commits from remote branch
+
+commit 874ab4824ab2d0a3860a11aa3108bf081337d068
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Thu Jul 30 21:35:48 2020 +0200
+
+    docs(readme.md): how to do squashing on local branch
+
+commit e1281151435f81cde3be0be59e8bc9769f7594ca
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Thu Jul 30 21:22:43 2020 +0200
+
+    feat(test): commit1 and commit2
+```
+
+check history on remote branch, for now there are no changes on remote branch!:
+
+```
+PS D:\GitHub\kicaj29\git-sample> git log -n 3 origin/master
+commit 845bdbb275ef4caddc4eb31df41fbbc580ef41b8 (origin/master, origin/HEAD)
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Fri Jul 31 08:28:22 2020 +0200
+
+    docs(readme.md): my commit3
+
+commit 0fe6259c019c7771f948cc5699ec62f7a111b17f
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Fri Jul 31 08:10:22 2020 +0200
+
+    docs(readme.md): my commit2
+
+commit 2375c2364c0415fb76bd7b117b824a0d201449ad
+Author: Jacek Kowalski <kicaj29@wp.pl>
+Date:   Fri Jul 31 08:05:31 2020 +0200
+
+    docs(readme.md): my commit1
+```
+
+3. push the changes to the remote branch:
+
+```
+git push origin +master
+```
+
+![remote-history-after-squash](./images/remote-history-after-squash.png)
