@@ -2,7 +2,8 @@ const scopes = [
 	"root",
 	"customer",
   "workflow",
-  "test"
+  "test",
+  "readme.md"
 ];
 
 module.exports = {

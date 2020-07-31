@@ -19,7 +19,8 @@ git push
 git reset --soft HEAD~1
 
 ## show last N commits
-git log -n 5
+git log -n 5   
+git log -n 2 origin/master
 
 ## Squashing commits on local branch
 Sample:   
@@ -100,3 +101,24 @@ Date:   Thu Jul 30 21:17:29 2020 +0200
 ```
 
 5. Now you can push the changes to remote branch.
+
+## Squashing commits on remote branch
+
+1. Create 3 local commits and push them to the remote branch
+
+```
+git add .
+git commit -m "docs(readme.md): my commit1"
+git push
+```
+```
+git add .
+git commit -m "docs(readme.md): my commit2"
+git push
+```
+```
+git add .
+git commit -m "docs(readme.md): my commit3"
+git push
+```
+check history:
