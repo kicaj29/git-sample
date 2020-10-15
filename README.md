@@ -1,12 +1,12 @@
 - [git-husky-commitlint](#git-husky-commitlint)
 - [helpful commands](#helpful-commands)
-  * [push changes from local repo to remote](#push-changes-from-local-repo-to-remote)
-  * [revert last commit](#revert-last-commit)
-  * [show last N commits](#show-last-n-commits)
-  * [Squashing commits on local branch](#squashing-commits-on-local-branch)
-  * [Squashing commits on remote branch](#squashing-commits-on-remote-branch)
-  * [set author name and email](#set-author-name-and-email)
-  * [edit git config files](#edit-git-config-files)
+  - [push changes from local repo to remote](#push-changes-from-local-repo-to-remote)
+  - [revert last commit](#revert-last-commit)
+  - [show last N commits](#show-last-n-commits)
+  - [Squashing commits on local branch](#squashing-commits-on-local-branch)
+  - [Squashing commits on remote branch](#squashing-commits-on-remote-branch)
+  - [set author name and email](#set-author-name-and-email)
+  - [edit git config files](#edit-git-config-files)
 
 
 
@@ -198,7 +198,7 @@ your configuration file:
 
     git config --global --edit
 
-After doing this, you may fix the identity used for this commit with:
+After doing this, you may fix the identity used for this commit with: 
 
     git commit --amend --reset-author
 
