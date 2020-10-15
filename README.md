@@ -281,4 +281,7 @@ system - for all users
 global - for current user (it will overried system)   
 local - for current repo (it will override global and system)   
 
-..
+...
+
+# resources
+[Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)
