@@ -16,6 +16,7 @@
     - [Check commits history on remote branches](#check-commits-history-on-remote-branches)
     - [Branches tree](#branches-tree)
     - [No changes on master](#no-changes-on-master)
+    - [Merge branch commit](#merge-branch-commit)
 - [resources](#resources)
 
 
@@ -348,6 +349,11 @@ We can see that new commits from the master branch appeared in the feature branc
 ### No changes on master
 
 ![10-no-changes-on-master.png](images/10-no-changes-on-master.png)
+
+### Merge branch commit
+
+Merge branch commit does not contain any changes, it only informs about the merge which in practice in this case we a rebase!
+![11-empty-commit.png](images/11-empty-commit.png)
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
