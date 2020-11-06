@@ -9,6 +9,8 @@
   - [edit git config files](#edit-git-config-files)
   - [change commit message in last local commit](#change-commit-message-in-last-local-commit)
   - [git rebase](#git-rebase)
+    - [Prepare scenario](#prepare-scenario)
+    - [Execute rebase](#execute-rebase)
 - [resources](#resources)
 
 
@@ -292,8 +294,23 @@ git commit --amend -m "New commit message."
 
 ## git rebase
 
+### Prepare scenario
+
+To present rebase we will use situation when we have feature branch with some commits and also we have some commits on master branch which do not exist on the feature branch - that`s why we need to rebase feature branch with master branch.
+
+> NOTE: to create feature branch using https://github.com/ page create a commit and select that new branch should be created:
 ![01-create-feature-branch.png](images/01-create-feature-branch.png)
 On the next screen you can cancel creation pull request because it is not needed in this case.
+
+
+![02-branches-tree.png](images/02-branches-tree.png)
+
+In the following screens we see that master branch contains commits that do not exist on the feature branch. After rebase these commit will be available on the feature branch!
+![03-feature-branch-history.png](images/03-feature-branch-history.png)
+![04-master-branch-history.png](images/04-master-branch-history.png)
+
+### Execute rebase
+
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
