@@ -292,6 +292,9 @@ git commit --amend -m "New commit message."
 
 ## git rebase
 
+![01-create-feature-branch.png](images/01-create-feature-branch.png)
+On the next screen you can cancel creation pull request because it is not needed in this case.
+
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
 [git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)
