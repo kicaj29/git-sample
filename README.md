@@ -10,7 +10,12 @@
   - [change commit message in last local commit](#change-commit-message-in-last-local-commit)
   - [git rebase](#git-rebase)
     - [Prepare scenario](#prepare-scenario)
-    - [Execute rebase](#execute-rebase)
+    - [Make sure that local branch is up to date with remote](#make-sure-that-local-branch-is-up-to-date-with-remote)
+    - [Checkout feature branch and run rebase on master](#checkout-feature-branch-and-run-rebase-on-master)
+    - [Push changes to the remote feature branch](#push-changes-to-the-remote-feature-branch)
+    - [Check commits history on remote branches](#check-commits-history-on-remote-branches)
+    - [Branches tree](#branches-tree)
+    - [No changes on master](#no-changes-on-master)
 - [resources](#resources)
 
 
@@ -309,8 +314,40 @@ In the following screens we see that master branch contains commits that do not 
 ![03-feature-branch-history.png](images/03-feature-branch-history.png)
 ![04-master-branch-history.png](images/04-master-branch-history.png)
 
-### Execute rebase
+### Make sure that local branch is up to date with remote
 
+```
+git pull
+```
+
+### Checkout feature branch and run rebase on master
+
+**Because we did not have any conflicts there was no merge conflict step.**
+![05-rebase-master.png](images/05-rebase-master.png)
+
+![06-just-after-rebase.png](images/06-just-after-rebase.png)
+
+### Push changes to the remote feature branch
+
+```
+git push --force-with-lease
+```
+In case there are changes in the remote repository push will be aborted!
+
+![07-push-feature-branch.png](images/07-push-feature-branch.png)
+
+### Check commits history on remote branches
+
+We can see that new commits from the master branch appeared in the feature branch!
+![08-feature-branch-commits.png](images/08-feature-branch-commits.png)
+
+### Branches tree
+
+![09-branches-tree.png](images/09-branches-tree.png)
+
+### No changes on master
+
+![10-no-changes-on-master.png](images/10-no-changes-on-master.png)
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
