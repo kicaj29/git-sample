@@ -7,6 +7,9 @@
   - [Squashing commits on remote branch](#squashing-commits-on-remote-branch)
   - [set author name and email](#set-author-name-and-email)
   - [edit git config files](#edit-git-config-files)
+  - [change commit message in last local commit](#change-commit-message-in-last-local-commit)
+  - [git rebase](#git-rebase)
+- [resources](#resources)
 
 
 
@@ -287,5 +290,8 @@ local - for current repo (it will override global and system)
 git commit --amend -m "New commit message."
 ```
 
+## git rebase
+
 # resources
-[Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)
+[Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
+[git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)
