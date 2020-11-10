@@ -17,6 +17,7 @@
     - [Branches tree](#branches-tree)
     - [No changes on master](#no-changes-on-master)
     - [Merge branch commit](#merge-branch-commit)
+  - [git commit --amend](#git-commit---amend)
 - [resources](#resources)
 
 
@@ -355,6 +356,18 @@ We can see that new commits from the master branch appeared in the feature branc
 Merge branch commit does not contain any changes, it only informs about the merge which in practice in this case we a rebase!
 ![11-empty-commit.png](images/11-empty-commit.png)
 
+## git commit --amend
+
+The git commit --amend command is a convenient way to modify the most recent commit. It also allows add some additional changes and not only modify existing commit message.
+
+```
+git add .
+git commit --amend
+[here new window with commit message will appear]
+git push --force-with-lease
+```
+
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
-[git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)
+[git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)   
+https://www.atlassian.com/git/tutorials/rewriting-history
