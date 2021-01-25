@@ -367,6 +367,11 @@ git commit --amend
 git push --force-with-lease
 ```
 
+Another version:
+```
+git commit --amend --no-edit
+```
+
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
 [git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)   
