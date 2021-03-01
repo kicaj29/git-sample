@@ -17,6 +17,7 @@
     - [Branches tree](#branches-tree)
     - [No changes on master](#no-changes-on-master)
     - [Merge branch commit](#merge-branch-commit)
+    - [another way](#another-way)
   - [git commit --amend](#git-commit---amend)
 - [resources](#resources)
 
@@ -355,6 +356,13 @@ We can see that new commits from the master branch appeared in the feature branc
 
 Merge branch commit does not contain any changes, it only informs about the merge which in practice in this case we a rebase!
 ![11-empty-commit.png](images/11-empty-commit.png)
+
+
+### another way
+
+```git pull --rebase origin develop```
+
+[git pull --rebase vs git rebase](https://stackoverflow.com/questions/38017517/git-pull-rebase-vs-git-rebase-whats-the-dangergit)
 
 ## git commit --amend
 
