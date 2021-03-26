@@ -19,6 +19,7 @@
     - [Merge branch commit](#merge-branch-commit)
     - [another way](#another-way)
   - [git commit --amend](#git-commit---amend)
+  - [create a new branch](#create-a-new-branch)
 - [resources](#resources)
 
 
@@ -379,6 +380,23 @@ Another version:
 ```
 git commit --amend --no-edit
 ```
+
+## create a new branch
+
+To create a new branch from local master execute the following commands:
+1. Check you current branch (from this branch the new branch will be created)
+```
+$ git branch
+  feature-branch
+* master
+```
+2. Create a new branch
+```
+$ git checkout -b my-new-branch
+Switched to a new branch 'my-new-branch'
+M       README.md
+```
+3. Next commit the changes
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
