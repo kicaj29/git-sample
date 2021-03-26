@@ -19,7 +19,7 @@
     - [Merge branch commit](#merge-branch-commit)
     - [another way](#another-way)
   - [git commit --amend](#git-commit---amend)
-  - [create a new branch](#create-a-new-branch)
+  - [create a new branch and pull request](#create-a-new-branch-and-pull-request)
 - [resources](#resources)
 
 
@@ -381,7 +381,7 @@ Another version:
 git commit --amend --no-edit
 ```
 
-## create a new branch
+## create a new branch and pull request
 
 To create a new branch from local master execute the following commands:
 1. Check you current branch (from this branch the new branch will be created)
@@ -397,6 +397,28 @@ Switched to a new branch 'my-new-branch'
 M       README.md
 ```
 3. Next commit the changes
+```
+$ git add .
+$ git commit -m "docs(readme.md): how to create a new branch"
+husky > commit-msg (node v14.5.0)
+[my-new-branch cf88ae1] docs(readme.md): how to create a new branch
+ 1 file changed, 18 insertions(+)
+ ```
+ 4. Next push the branch to the remote
+```
+$ git push --set-upstream origin my-new-branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 552 bytes | 552.00 KiB/s, done.
+```
+5. Create pull request
+
+![12-create-pull-request](./images/12-create-pull-request.png)
+![13-create-pull-request](./images/13-create-pull-request.png)
+![14-create-pull-request](./images/14-create-pull-request.png)
+![15-create-pull-request](./images/15-create-pull-request.png)
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
