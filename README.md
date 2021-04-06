@@ -367,6 +367,7 @@ NOTE: if there are merge conflicts resolve them and next run
 
 ```git add .```   
 ```git rebase --continue```
+```git push -f```
 
 [git pull --rebase vs git rebase](https://stackoverflow.com/questions/38017517/git-pull-rebase-vs-git-rebase-whats-the-dangergit)
 
