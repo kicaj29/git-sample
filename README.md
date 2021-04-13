@@ -19,6 +19,7 @@
     - [Merge branch commit](#merge-branch-commit)
     - [another way](#another-way)
   - [git commit --amend](#git-commit---amend)
+  - [undo all local not staged changes](#undo-all-local-not-staged-changes)
 - [resources](#resources)
 
 
@@ -385,6 +386,12 @@ git push --force-with-lease
 Another version:
 ```
 git commit --amend --no-edit
+```
+
+## undo all local not staged changes
+
+```
+git checkout .
 ```
 
 # resources
