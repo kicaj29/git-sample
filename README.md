@@ -20,6 +20,7 @@
     - [another way](#another-way)
   - [git commit --amend](#git-commit---amend)
   - [undo all local not staged changes](#undo-all-local-not-staged-changes)
+  - [checkout for Remote Branches](#checkout-for-remote-branches)
 - [resources](#resources)
 
 
@@ -394,7 +395,16 @@ git commit --amend --no-edit
 git checkout .
 ```
 
+## checkout for Remote Branches
+
+The syntax for making git checkout "remote-ready" is rather easy: simply add the "--track" flag and the remote branch's ref like in the following example:
+
+```
+git checkout --track origin/newsletter
+```
+
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
 [git rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI)   
-https://www.atlassian.com/git/tutorials/rewriting-history
+https://www.atlassian.com/git/tutorials/rewriting-history   
+https://www.git-tower.com/learn/git/faq/checkout-remote-branch   
