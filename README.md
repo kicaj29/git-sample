@@ -8,6 +8,7 @@
   - [set author name and email](#set-author-name-and-email)
   - [edit git config files](#edit-git-config-files)
   - [change commit message in last local commit](#change-commit-message-in-last-local-commit)
+  - [git merge](#git-merge)
   - [git rebase](#git-rebase)
     - [Prepare scenario](#prepare-scenario)
     - [Make sure that local branch is up to date with remote](#make-sure-that-local-branch-is-up-to-date-with-remote)
@@ -300,6 +301,13 @@ local - for current repo (it will override global and system)
 ## change commit message in last local commit
 ```
 git commit --amend -m "New commit message."
+```
+
+## git merge
+
+```
+git fetch -p
+git merge origin/main
 ```
 
 ## git rebase
