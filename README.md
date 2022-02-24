@@ -8,6 +8,7 @@
   - [set author name and email](#set-author-name-and-email)
   - [edit git config files](#edit-git-config-files)
   - [change commit message in last local commit](#change-commit-message-in-last-local-commit)
+  - [git cherry pick](#git-cherry-pick)
   - [git merge](#git-merge)
   - [git rebase](#git-rebase)
     - [Prepare scenario](#prepare-scenario)
@@ -301,6 +302,18 @@ local - for current repo (it will override global and system)
 ## change commit message in last local commit
 ```
 git commit --amend -m "New commit message."
+```
+
+## git cherry pick
+
+Cherry pick and automatically create a local commit:
+```
+git cherry-pick [COMMIT-ID]
+```
+
+Cherry pick and do not automatically create a local commit:
+```
+git cherry-pick [COMMIT-ID] -n
 ```
 
 ## git merge
