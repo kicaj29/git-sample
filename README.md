@@ -392,6 +392,8 @@ NOTE: if there are merge conflicts resolve them and next run
 ```git rebase --continue```   
 ```git push -f```
 
+> NOTE: press ESC and type `:wq` in the vi editor if you resolved some conflicts in rebase
+
 [git pull --rebase vs git rebase](https://stackoverflow.com/questions/38017517/git-pull-rebase-vs-git-rebase-whats-the-dangergit)
 
 ## git commit --amend
