@@ -23,6 +23,7 @@
   - [git commit --amend](#git-commit---amend)
   - [undo all local not staged changes](#undo-all-local-not-staged-changes)
   - [checkout for Remote Branches](#checkout-for-remote-branches)
+- [GitHub generate personal access token to get access to nuget packages](#github-generate-personal-access-token-to-get-access-to-nuget-packages)
 - [resources](#resources)
 
 
@@ -425,6 +426,41 @@ The syntax for making git checkout "remote-ready" is rather easy: simply add the
 ```
 git checkout --track origin/newsletter
 ```
+# GitHub generate personal access token to get access to nuget packages
+
+* Go to `Developer settings`
+
+![12-nuget-access.png](./images/12-nuget-access.png)
+
+* Next go to `Tokens (classic)` and generate the token. If needed configure SSO with your organization
+
+![13-nuget-access.png](./images/13-nuget-access.png)
+
+Make sure that you set correct permission for the generated tokens.
+
+![14-nuget-access.png](./images/14-nuget-access.png)
+
+* Next go to local machine C:\Users\[USR]]\AppData\Roaming\NuGet\NuGet.Config and add the following section
+
+https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-with-a-personal-access-token
+
+```xml
+<configuration>
+    <packageSources>
+        <clear />
+        <add key="github" value="https://nuget.pkg.github.com/NAMESPACE/index.json" />
+    </packageSources>
+    <packageSourceCredentials>
+        <github>
+            <add key="Username" value="USERNAME" />
+            <add key="ClearTextPassword" value="TOKEN" />
+        </github>
+    </packageSourceCredentials>
+</configuration>
+```
+
+Set user to your github account and in the `ClearTextPassword` set the generated token. Now you should be able to download nuget packages -
+also from selected organizations if SSO option has been selected. **Make sure that you change NAMESPACE in the url to the name used by your organization.**
 
 # resources
 [Keeping Feature Branches Up To Date With Rebasing | Git Workflows](https://www.youtube.com/watch?v=dqVqMwLzOjU)   
