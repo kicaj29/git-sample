@@ -440,7 +440,7 @@ Make sure that you set correct permission for the generated tokens.
 
 ![14-nuget-access.png](./images/14-nuget-access.png)
 
-* Next go to local machine C:\Users\[USR]]\AppData\Roaming\NuGet\NuGet.Config and add the following section
+* Next go to local machine C:\Users\[USR]\AppData\Roaming\NuGet\NuGet.Config and add the following section
 
 https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry#authenticating-with-a-personal-access-token
 
