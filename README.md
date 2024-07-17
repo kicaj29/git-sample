@@ -196,6 +196,7 @@ It will open GNU nano editor. Type squash for commit2 and commit3:
 ![editor-squash](./images/editor-squash.png)
 
 Next press `Ctrl+o` to save the changes and press Enter to confirm it.
+
 NOTE: in another editors like vim you must type `i` to enter edit mode. Type `Esc:wq` to write data (`Esc` is needed to leave edit mode).
 ![editor-squash-save](./images/editor-squash-save.png)
 
@@ -208,7 +209,7 @@ Comment out commit 2 and 3 and update text for commit 1:
 
 ![editor-commits-after-change](./images/editor-commits-after-change.png)
 
-Save and close the changes: ctrl+o, enter, ctrl + x.
+Save and close the changes: ctrl+o, enter, ctrl + x.   
 NOTE: in another editors like vim you must type `Esc:wq` to write data (`Esc` is needed to leave edit mode).
 
 ```
