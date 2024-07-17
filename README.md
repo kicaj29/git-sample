@@ -187,11 +187,18 @@ Date:   Thu Jul 30 21:35:48 2020 +0200
 git rebase -i origin/master~3 master
 ```
 
+NOTE: if you are on feature branch you must specify feature branch name, for example:
+```
+git rebase -i origin/fix/update-seed-data~2 fix/update-seed-data
+```
+
 It will open GNU nano editor. Type squash for commit2 and commit3: 
 ![editor-squash](./images/editor-squash.png)
 
-Next press Ctrl+o to save the changes and press Enter to confirm it.
+Next press `Ctrl+o` to save the changes and press Enter to confirm it.
+NOTE: in another editors like vim you must type `i` to enter edit mode. Type `Esc:wq` to write data (`Esc` is needed to leave edit mode).
 ![editor-squash-save](./images/editor-squash-save.png)
+
 
 Next press Ctrl+x to close the file. It will open next editor:
 
@@ -202,6 +209,7 @@ Comment out commit 2 and 3 and update text for commit 1:
 ![editor-commits-after-change](./images/editor-commits-after-change.png)
 
 Save and close the changes: ctrl+o, enter, ctrl + x.
+NOTE: in another editors like vim you must type `Esc:wq` to write data (`Esc` is needed to leave edit mode).
 
 ```
 PS D:\GitHub\kicaj29\git-sample> git rebase -i origin/master~3 master
