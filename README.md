@@ -195,13 +195,12 @@ git rebase -i origin/fix/update-seed-data~2 fix/update-seed-data
 It will open GNU nano editor. Type squash for commit2 and commit3: 
 ![editor-squash](./images/editor-squash.png)
 
-Next press `Ctrl+o` to save the changes and press Enter to confirm it.
-
+Next press `Ctrl+o` to save the changes and press Enter to confirm it. Next press Ctrl+x to close the file.
 NOTE: in another editors like vim you must type `i` to enter edit mode. Type `Esc:wq` to write data (`Esc` is needed to leave edit mode).
+
 ![editor-squash-save](./images/editor-squash-save.png)
 
-
-Next press Ctrl+x to close the file. It will open next editor:
+After saving changes and closing previous file automatically next file will be opened:
 
 ![editor-commits](./images/editor-commits.png)   
 
